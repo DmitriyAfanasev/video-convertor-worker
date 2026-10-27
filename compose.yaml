@@ -1,0 +1,14 @@
+services:
+  minitube:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      WORKERS: "2"
+      MAX_UPLOAD_MB: "2048"
+    volumes:
+      - ./video-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  video-data:
