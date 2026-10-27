@@ -3,3 +3,4 @@
 video-data/
 *.log
 server
+.idea/
